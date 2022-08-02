@@ -1,10 +1,15 @@
 <template>
   <div class="options-container">
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
+      <!-- en el click se pasa primero el nombre, y en este caso se le pasa el
+      ID del pokemon para poder usarlo del otro lado, ademas el $emit es para crear
+      eventos personalizados-->
+      <li v-for="pokemon in pokemons" 
+          :key="pokemon.id"
+          
+          @click="$emit( 'selection', pokemon.id )">
+        {{pokemon.name}}
+      </li>
     </ul>
   </div>
 
@@ -12,7 +17,13 @@
 
 <script>
 export default {
+  props: {
+    pokemons: {
+      type: Array,
+      required: true
 
+    }
+  }
 }
 </script>
 

@@ -23,7 +23,6 @@ const getPokemonOptions = async() => {
     //en este caso, toma la 0, 1 , 2 y 3, ademas esta como async para poder
     // resolver las promesas dentro de la funcion
     const pokemons =  await getPokemonNames(mixedPokemons.splice(0,4))
-    console.table(pokemons)
 
     return pokemons
 }
