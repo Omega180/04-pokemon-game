@@ -1,5 +1,8 @@
 # 04-pokemon-game
 
+Disponible atraves de Netlify: https://omega-pokemon-vue-practica.netlify.app
+Para uso de manera local: 
+
 ## Project setup
 ```
 npm install
