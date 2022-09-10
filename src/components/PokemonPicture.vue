@@ -4,8 +4,8 @@
     <!-- Ojo, para poder usar la propiedad computada hay que usar el v-bind
     en el src para que funcione, se manda la propiedad computada sin
     los () para que funcione de igual manera -->
-  <img class="hidden-pokemon" :src="imgSrc" alt="pokemon">
-  <img class="fade-in" v-if="showPokemon" :src="imgSrc" alt="pokemon">
+  <img class="hidden-pokemon" v-if="!showPokemon" :src="imgSrc" alt="pokemon">
+  <img class="fade-in" v-else :src="imgSrc" alt="pokemon">
 </div>
 
 
@@ -45,7 +45,6 @@ export default {
 }
 img {
     height: 200px;
-    position: absolute;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
